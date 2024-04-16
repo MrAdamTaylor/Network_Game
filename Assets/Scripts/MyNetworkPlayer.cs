@@ -27,7 +27,7 @@ public class MyNetworkPlayer : NetworkBehaviour
         _playerColor = color;
     }
 
-    [Command]
+    [Command(requiresAuthority = true)]
     private void CmdSetDisplayName(string newDisplayName)
     {
         //TODO - расширить обработку...
